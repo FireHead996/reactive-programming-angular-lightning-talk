@@ -1,0 +1,50 @@
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title">Simple reactive form</h2>
+    <div class="row">
+      <div class="col-md-5">
+        <form [formGroup]="reactiveForm">
+          <fieldset>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="First input"
+                formControlName="firstInput"
+                id="First"
+              />
+            </div>
+            <div class="form-group mt-4">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Second input"
+                formControlName="secondInput"
+                id="Second"
+              />
+            </div>
+            <div class="form-group mt-4">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Third input"
+                formControlName="thirdInput"
+                id="Third"
+              />
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary mt-4"
+              (click)="submitForm()"
+            >
+              Submit
+            </button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="col-md-5 offset-md-2">
+        <pre>form: {{ reactiveForm.value | json }}</pre>
+      </div>
+    </div>
+  </div>
+</div>

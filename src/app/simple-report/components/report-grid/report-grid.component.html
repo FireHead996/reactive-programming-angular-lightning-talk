@@ -1,0 +1,16 @@
+<table class="table table-hover" *ngIf="dataRows | async as rows">
+  <thead>
+    <tr>
+      <th scope="col">First Input</th>
+      <th scope="col">Second Input</th>
+      <th scope="col">Third Input</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of rows">
+      <td>{{ row.firstInput }}</td>
+      <td>{{ row.secondInput }}</td>
+      <td>{{ row.thirdInput }}</td>
+    </tr>
+  </tbody>
+</table>

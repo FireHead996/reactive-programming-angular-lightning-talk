@@ -1,0 +1,34 @@
+<form [formGroup]="form">
+  <fieldset>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="First input"
+        formControlName="firstInput"
+        id="First"
+      />
+    </div>
+    <div class="form-group mt-4">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Second input"
+        formControlName="secondInput"
+        id="Second"
+      />
+    </div>
+    <div class="form-group mt-4">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Third input"
+        formControlName="thirdInput"
+        id="Third"
+      />
+    </div>
+    <button type="button" class="btn btn-primary mt-4" (click)="submitForm()">
+      Submit
+    </button>
+  </fieldset>
+</form>
